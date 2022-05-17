@@ -3,7 +3,7 @@ beautifulsoup4
 hachoir
 numpy
 Pillow
-pyrogram
+pyrogram==2.*
 requests
 tgcrypto
 yt-dlp
@@ -17,4 +17,3 @@ filetype
 tldextract
 aiofiles
 pyromod
-lk21
