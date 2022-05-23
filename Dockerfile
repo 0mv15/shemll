@@ -1,13 +1,7 @@
-FROM ubuntu:22.04
+FROM debian:latest
 
 RUN apt update && apt upgrade -y
-RUN add-apt-repository ppa:savoury1/ffmpeg5
-RUN add-apt-repository ppa:savoury1/ffmpeg4 
-RUN apt -qq install -y python3 python3-pip 
-RUN apt -qq install -y ffmpeg  
-
-
-RUN apt install git curl python3-pip ffmpeg software-properties-common mediainfo -y
+RUN apt install git curl python3-pip ffmpeg -y
 RUN pip3 install -U pip
 RUN curl -sL https://deb.nodesource.com/setup_16.x | bash - && \
     apt-get install -y nodejs && \
