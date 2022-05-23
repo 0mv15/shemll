@@ -60,9 +60,6 @@
     }
   },
   "addons": [
-  ],
-  "buildpacks": [{
-    "url": "https://github.com/FFmpeg/FFmpeg"
   }, {
     "url": "heroku/python"
   }],
