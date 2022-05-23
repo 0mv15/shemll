@@ -58,10 +58,9 @@
       "description": "Your Bot Username Without @",
       "value": ""
     }
-  },
   "addons": [
-  }, {
-    "url": "heroku/python"
+  }
+   "url": "heroku/python"
   }],
   "formation": {
     "worker": {
