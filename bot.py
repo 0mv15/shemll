@@ -27,4 +27,3 @@ if __name__ == "__main__" :
         in_memory=True,
         plugins=plugins)
     Tellybots.run()
-    
