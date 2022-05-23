@@ -45,7 +45,7 @@ async def start(bot, update):
 async def shell(bot, update):
     cmd = update.text.split(' ', 1)
     if len(cmd) == 1:
-        await update.reply_text(text='no cmd ðŸ™‡â€â™‚ï¸')
+        await update.reply_text(text='no cmd 🙇‍♂️')
         return
     cmd = cmd[1]
     process = run(cmd, capture_output=True, shell=True)
@@ -90,4 +90,4 @@ async def tgupload(bot, update):
         document=filename,
         #thumb="thumb.jpg",
         caption=f"<b>{filename}</b>")
-    await proc.edit_text(text="uploaded ðŸ˜Š")
+    await proc.edit_text(text="uploaded 😊")
