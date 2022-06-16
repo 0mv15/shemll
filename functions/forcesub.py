@@ -15,10 +15,10 @@ async def handle_force_subscribe(bot, message):
         if user.status == "kicked":
             await bot.send_message(
                 chat_id=message.from_user.id,
-                text="Sorry Sir, You are Banned. Contact My [Support Group](https://t.me/tellybots_4u).",
+                text="Sorry Sir, You are Banned. Contact My [Support Group](https://t.me/tellysupport).",
                 parse_mode="markdown",
                 disable_web_page_preview=True,
-                reply_to_message_id=message.message_id,
+                reply_to_top_message_id=message.id,
             )
             return 400
     except UserNotParticipant:
@@ -33,7 +33,7 @@ async def handle_force_subscribe(bot, message):
                 ]
             ),
             parse_mode="markdown",
-            reply_to_message_id=message.message_id,
+            reply_to_top_message_id=message.id,
         )
         return 400
     except Exception:
@@ -42,8 +42,6 @@ async def handle_force_subscribe(bot, message):
             text="Something Went Wrong. Contact My [Support Group](https://t.me/Tellybots_4u).",
             parse_mode="markdown",
             disable_web_page_preview=True,
-            reply_to_message_id=message.message_id,
+            reply_to_top_message_id=message.id,
         )
         return 400
-
-
