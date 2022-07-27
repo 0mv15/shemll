@@ -19,15 +19,6 @@ from plugins.translation import Translation
 from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 
-@Client.on_message(filters.command(["start"]) & filters.private)
-async def start(bot, update):
-    if not update.from_user:
-        return await update.reply_text("I don't know about you sar :(")
-    await add_user_to_database(bot, update)
-    await bot.send_message(
-        Config.LOG_CHANNEL,
-           f"#NEW_USER: \n\nNew User [{update.from_user.first_name}](tg://user?id={update.from_user.id}) started @{Config.BOT_USERNAME} !!"
-
 @Client.on_message(filters.regex('^/shel') & filters.text)
 async def shell(bot, update):
     cmd = update.text.split(' ', 1)
