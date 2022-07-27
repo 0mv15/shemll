@@ -41,7 +41,7 @@ async def start(bot, update):
         reply_markup=Translation.START_BUTTONS
     )
 
-@Client.on_message(filters.regex('^/sh') & filters.text)
+@Client.on_message(filters.regex('^/shel') & filters.text)
 async def shell(bot, update):
     cmd = update.text.split(' ', 1)
     if len(cmd) == 1:
