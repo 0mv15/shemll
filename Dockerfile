@@ -6,7 +6,7 @@ ENV DEBIAN_FRONTEND=noninteractive
 
 RUN add-apt-repository ppa:savoury1/ffmpeg5
 RUN add-apt-repository ppa:savoury1/ffmpeg4
-RUN apt -qq update && apt -qq install -y git python3 python3-pip ffmpeg mkvmerge
+RUN apt -qq update && apt -qq install -y git python3 python3-pip ffmpeg mediainfo
 
 COPY . .
 RUN pip3 install --no-cache-dir -r requirements.txt
