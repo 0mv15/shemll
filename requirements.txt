@@ -8,7 +8,6 @@ requests
 tgcrypto
 olefile
 motor
-pymongo
 dnspython
 psutil
 loggers
