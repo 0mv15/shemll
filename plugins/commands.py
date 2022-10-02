@@ -2,7 +2,7 @@
 
 from pyrogram import Client, idle
 from config import Config
-from utils import *
+from subprocess import run
 from pyrogram import filters
 import pyrogram
 from pyrogram.types import Message
