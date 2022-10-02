@@ -8,7 +8,6 @@ logger = logging.getLogger(__name__)
 
 import os
 from config import Config
-
 from pyrogram import Client as Tellybots
 from pyrogram import filters
 logging.getLogger("pyrogram").setLevel(logging.WARNING)
