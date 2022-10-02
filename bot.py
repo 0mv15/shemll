@@ -7,7 +7,7 @@ logging.basicConfig(level=logging.DEBUG,
 logger = logging.getLogger(__name__)
 
 import os
-from plugins.config import Config
+from config import Config
 
 from pyrogram import Client as Tellybots
 from pyrogram import filters
