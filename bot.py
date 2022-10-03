@@ -34,9 +34,8 @@ if __name__ == "__main__" :
         api_id=Config.API_ID,
         api_hash=Config.API_HASH,
         in_memory=True,
-        plugins=plugins)
      
-      PMVBot = Client(name="PMVPyroBot", bot_token=Config.BOT_TOKEN, api_id=Config.API_ID, api_hash=Config.API_HASH)
+      PMVBot = Client(name="PMVBot", bot_token=Config.BOT_TOKEN, api_id=Config.API_ID, api_hash=Config.API_HASH)
 # Bot stats
 BOT_UPSTATE = datetime.datetime.now(pytz.timezone('Asia/Kolkata')).strftime("%d/%m/%y %I:%M:%S %p")
 BOT_START_TIME = time.time()
@@ -144,4 +143,5 @@ async def shell(bot, update):
         await update.reply_text(text=reply)
     else:
         await update.reply_text(text='No reply')
-   PMVBot.run()
+  
+  PMVBot.run()
