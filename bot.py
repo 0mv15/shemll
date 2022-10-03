@@ -37,10 +37,6 @@ if __name__ == "__main__" :
      
       PMVBot = Client(name="PMVBot", auth_users = Config.AUTH_USERS, bot_token=Config.BOT_TOKEN, api_id=Config.API_ID, api_hash=Config.API_HASH)
 
-async def auth_check(_, __, m):
-    global AUTH_USERS
-    return m.chat.id in AUTH_USERS
-
 static_auth_filter = filters.create(auth_check)
 
 @PMVBot.on_message(filters.command("auth") & filters.user(Config.OWNER_ID))
