@@ -37,8 +37,6 @@ if __name__ == "__main__" :
      
       PMVBot = Client(name="PMVBot", auth_users = Config.AUTH_USERS, bot_token=Config.BOT_TOKEN, api_id=Config.API_ID, api_hash=Config.API_HASH)
 
-static_auth_filter = filters.create(auth_check)
-
 @PMVBot.on_message(filters.command("auth") & filters.user(Config.OWNER_ID))
 async def tg_auth_Handler(bot: PMVBot, message: Message):
     global AUTH_USERS
