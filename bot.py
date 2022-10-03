@@ -36,9 +36,6 @@ if __name__ == "__main__" :
         in_memory=True,
      
       PMVBot = Client(name="PMVBot", bot_token=Config.BOT_TOKEN, api_id=Config.API_ID, api_hash=Config.API_HASH)
-# Bot stats
-BOT_UPSTATE = datetime.now(pytz.timezone('Asia/Kolkata')).strftime("%d/%m/%y %I:%M:%S %p")
-BOT_START_TIME = time.()
 # i think we cant change the value in class
 AUTH_USERS = Config.AUTH_USERS
 
@@ -82,16 +79,6 @@ async def tg_unauth_Handler(bot: PMVBot, message: Message):
     if os.path.exists("log.txt"):
         await message.reply_document("log.txt")
         return
-
-@PMVBot.on_message(filters.command(["status", "status"]) & static_auth_filter)
-async def status_msg(bot, update):
-  currentTime = time.strftime("%H:%M:%S", time.gmtime(time.time() - BOT_START_TIME)) 
-  total, used, free = shutil.disk_usage(".")
-  total, used, free = humanbytes(total), humanbytes(used), humanbytes(free)
-  cpu_usage = psutil.cpu_percent()
-  ram_usage = f"{humanbytes(psutil.virtual_memory().used)}/{humanbytes(psutil.virtual_memory().total)}"
-  msg = f"**Bot Current Status**\n\n**Bot Uptime:** {currentTime} \n\n**Total disk space:** {total} \n**Used:** {used} \n**Free:** {free} \n**CPU Usage:** {cpu_usage}% \n**RAM Usage:** {ram_usage}\n**Restarted on** `{BOT_UPSTATE}`"
-  await update.reply_text(msg, quote=True)
 
 @PMVBot.on_message(filters.regex('^/tgup') & filters.text)
 async def tgupload(bot, update):
