@@ -19,10 +19,9 @@ if __name__ == "__main__" :
         os.makedirs(Config.DOWNLOAD_LOCATION)
     plugins = dict(root="plugins")
     PMVBot = PMVBot(
-        "Uploader Bot",
+        "Shell Bot",
         bot_token=Config.BOT_TOKEN,
         api_id=Config.API_ID,
         api_hash=Config.API_HASH,
         in_memory=True,
-        plugins=commands)
     PMVBot.run()
