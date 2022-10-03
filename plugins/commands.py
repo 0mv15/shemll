@@ -131,10 +131,3 @@ async def shell(bot, update):
         await update.reply_text(text=reply)
     else:
         await update.reply_text(text='No reply')
-
-PMVBot.start()
-print("----@PMV15----")
-print("------Bot Started------")
-idle()
-print("------Bot Stopped------")
-PMVBot.stop()
