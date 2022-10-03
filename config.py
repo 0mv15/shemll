@@ -3,6 +3,8 @@ import logging
 
 class Config(object):
     
+    AUTH_USERS = os.environ.get("AUTH_USERS", "")
+   
     BOT_TOKEN = os.environ.get("BOT_TOKEN", "")
     
     API_ID = int(os.environ.get("API_ID"))
