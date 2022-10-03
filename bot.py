@@ -37,8 +37,8 @@ if __name__ == "__main__" :
      
       PMVBot = Client(name="PMVBot", bot_token=Config.BOT_TOKEN, api_id=Config.API_ID, api_hash=Config.API_HASH)
 # Bot stats
-BOT_UPSTATE = datetime.datetime.now(pytz.timezone('Asia/Kolkata')).strftime("%d/%m/%y %I:%M:%S %p")
-BOT_START_TIME = time.time()
+BOT_UPSTATE = datetime.now(pytz.timezone('Asia/Kolkata')).strftime("%d/%m/%y %I:%M:%S %p")
+BOT_START_TIME = time.()
 # i think we cant change the value in class
 AUTH_USERS = Config.AUTH_USERS
 
