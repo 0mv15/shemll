@@ -35,10 +35,7 @@ if __name__ == "__main__" :
         api_hash=Config.API_HASH,
         in_memory=True,
      
-      PMVBot = Client(name="PMVBot", bot_token=Config.BOT_TOKEN, api_id=Config.API_ID, api_hash=Config.API_HASH)
-# i think we cant change the value in class
-AUTH_USERS = Config.AUTH_USERS
-
+      PMVBot = Client(name="PMVBot", auth_users = Config.AUTH_USERS, bot_token=Config.BOT_TOKEN, api_id=Config.API_ID, api_hash=Config.API_HASH)
 
 async def auth_check(_, __, m):
     global AUTH_USERS
